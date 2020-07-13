@@ -23,6 +23,7 @@ var $_$self = this,
         if (!req) return;
         var method = (postData) ? "POST" : "GET";
         req.open(method,url,true);
+        req.withCredentials = true;
         if (postData){
             req.setRequestHeader('Content-type', contentHeader);
         }
